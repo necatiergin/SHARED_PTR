@@ -29,5 +29,5 @@ int main()
 			std::cout << *s << '\n';
 	}
 
-	std::cout << "main devam ediyor\n";
+	std::cout << "main is still running\n";
 }
