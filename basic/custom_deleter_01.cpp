@@ -8,10 +8,11 @@ int main()
 {
 	{
 		std::shared_ptr<Person> sptr{ new Person{"Gul", "Eryaman"}, [](Person* p) {
-									std::cout << *p << " kisisi delete ediliyor\n";
+									std::cout << *p << " is being deleted\n";
 									delete p;
 									} };
 	}
 
-	std::cout << "main devam ediyor\n";
+	std::cout << "main is still running\n";
+	//....
 }
