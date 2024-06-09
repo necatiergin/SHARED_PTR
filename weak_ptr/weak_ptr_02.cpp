@@ -8,21 +8,21 @@ int main()
 {
 	auto spx = make_shared<Person>("Hakki", "Alagoz");
 
-	cout << *spx << "\n";
-	cout << "spx use count = " << spx.use_count() << "\n";
+	cout << *spx << '\n';
+	cout << "spx use count = " << spx.use_count() << '\n';
 	weak_ptr<Person> wp(spx);
-	cout << "spx use count = " << spx.use_count() << "\n";
-	cout << "wp.use_count() = " << wp.use_count() << "\n";
+	cout << "spx use count = " << spx.use_count() << '\n';
+	cout << "wp.use_count() = " << wp.use_count() << '\n';
 
 	spx.reset();
 
 	if (wp.expired()) {
-		std::cout << "delete edilmis\n";
+		std::cout << "resource released\n";
 	}
 	else {
-		cout << "hayir henuz delete edilmemis\n";
+		cout << "resource not yet released\n";
 		shared_ptr sx{ wp };
-		cout << *sx << "\n";
+		cout << *sx << '\n';
 	}
 	(void)getchar();
 }
