@@ -1,15 +1,15 @@
 #include <iostream>
 #include <memory>
 
-struct Deleter {    
-    void operator()(int* p) 
+struct Deleter {
+    void operator()(int* p)
     {
         std::cout << "Deleter operator()(int *) called for the address : " << p << '\n';
         delete[] p;
     }
 };
 
-int main() 
+int main()
 {
     std::shared_ptr<int> sp(new int[10], Deleter());
 
