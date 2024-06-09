@@ -9,14 +9,14 @@ int main()
 		auto sp1 = make_shared<Person>("Necati", "Ergin");
 		cout << *sp1 << '\n';
 		cout << "sp1.use_count() = " << sp1.use_count() << '\n';
-		cout << "bir tusa basin ";
+		cout << "press any key to continue ";
 		(void)getchar();
 		{
 			auto sp2 = sp1;
 			cout << *sp2 << '\n';
 			cout << "sp1.use_count() = " << sp1.use_count() << '\n';
 			cout << "sp2.use_count() = " << sp2.use_count() << '\n';
-			cout << "bir tusa basin ";
+			cout << "press any key to continue ";
 			(void)getchar();
 			{
 				auto sp3 = sp2;
@@ -24,11 +24,11 @@ int main()
 				cout << "sp1.use_count() = " << sp1.use_count() << '\n';
 				cout << "sp2.use_count() = " << sp2.use_count() << '\n';
 				cout << "sp3.use_count() = " << sp3.use_count() << '\n';
-				cout << "bir tusa basin ";
+				cout << "press any key to continue ";
 				(void)getchar();
 			}
 		}
 		cout << "sp1.use_count() = " << sp1.use_count() << '\n';
 	}
-	std::cout << "main devam ediyor\n";
+	std::cout << "main is still running\n";
 }
