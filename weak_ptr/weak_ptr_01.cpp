@@ -13,7 +13,7 @@ int main()
 	cout << "sptr.use_count() = " << sptr.use_count() << '\n';
 	//sptr.reset();
 	//cout << "wp.use_count() = " << wp.use_count() << '\n';
-	//cout << "wp.expired() = " << wp.expired() << "\n";
+	//cout << "wp.expired() = " << wp.expired() << '\n';
 
 	//if (shared_ptr<Date> sp = wp.lock()) {
 	if (auto sp = wp.lock()) {
@@ -22,5 +22,4 @@ int main()
 	else {
 		cout << "resource already released\n";
 	}
-
 }
