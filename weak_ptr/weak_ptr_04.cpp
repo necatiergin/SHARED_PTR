@@ -5,36 +5,37 @@
 using namespace std;
 
 class Dog {
-	std::weak_ptr<Dog> mp_friend;   //köpeğin arkadaşını tutacak
+	std::weak_ptr<Dog> mp_friend;   //pointer to dog's friend
 	std::string m_name;
 public:
 	Dog(std::string name) : m_name(std::move(name))
 	{
-		std::cout << "kopek " << m_name << " olusturuldu" << std::endl;
+		std::cout << "dog " << m_name << " is in the game\n";
 	}
 
-	~Dog() {
-		std::cout << "kopek " << m_name << " oyundan cikiyor" << std::endl;
+	~Dog() 
+	{
+		std::cout << "dog " << m_name << " is out of the game\n";
 	}
 
 	void bark()
 	{
-		cout << m_name << " havliyor" << endl;
+		cout << m_name << " is barking\n";
 	}
 
 	void make_friend(shared_ptr<Dog> x)
 	{
 		mp_friend = x;
-		cout << m_name << " " << x->m_name << " ile arkadas oldu" << endl;
+		cout << m_name << " made friend with " << x->m_name << "\n";
 	}
 
 	void show_friend() const
 	{
 		if (!mp_friend.expired()) {
-			cout << "benim arkadasim : " << mp_friend.lock()->m_name << endl;
+			cout << "my friend: " << mp_friend.lock()->m_name << endl;
 		}
 		else {
-			cout << "bir arkadasim yok " << endl;
+			cout << "I don't have any friends\n";
 		}
 	}
 };
