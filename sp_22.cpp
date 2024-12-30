@@ -3,7 +3,6 @@
 #include <vector>
 #include <algorithm>
 
-
 //name_list.h
 
 using svector = std::vector<std::string>;
