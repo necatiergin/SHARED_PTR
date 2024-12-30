@@ -17,12 +17,13 @@ int main()
 		mylist.emplace_back(new Person{ "Deniz", "Akgun" });
 
 		{
-			std::vector<std::shared_ptr<Person>> myvec(mylist.begin(), mylist.end());
+			std::vector myvec(mylist.begin(), mylist.end());
 			////
 			sort(myvec.begin(), myvec.end(), [](const auto& p1, const auto& p2) {return *p1 < *p2; });
 			for (auto& s : myvec)
 				std::cout << *s << '\n';
-			std::cout << "bir tusa basin "; (void)getchar();
+			std::cout << "press any key "; 
+			(void)getchar();
 		}
 
 		for (auto& s : mylist)
