@@ -4,11 +4,12 @@
 
 int main()
 {
-	using namespace std;
-	cout << boolalpha;
+	using std::cout;
 
-	auto sptr = make_shared<Point>(4, 7, 9);
-	weak_ptr<Point> wp{ sptr };
+	cout << std::boolalpha;
+
+	auto sptr = std::make_shared<Point>(4, 7, 9);
+	std::weak_ptr<Point> wp{ sptr };
 
 	cout << "sptr.use_count() = " << sptr.use_count() << '\n';
 	//sptr.reset();
