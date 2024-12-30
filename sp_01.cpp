@@ -4,9 +4,9 @@
 
 int main()
 {
-	using namespace std;
+	using std::cout;
 	{
-		auto sp1 = make_shared<Person>("Necati", "Ergin");
+		auto sp1 = std::make_shared<Person>("Necati", "Ergin");
 		cout << *sp1 << '\n';
 		cout << "sp1.use_count() = " << sp1.use_count() << '\n';
 		cout << "press any key to continue ";
@@ -17,7 +17,7 @@ int main()
 			cout << "sp1.use_count() = " << sp1.use_count() << '\n';
 			cout << "sp2.use_count() = " << sp2.use_count() << '\n';
 			cout << "press any key to continue ";
-			(void)getchar();
+			(void)std::getchar();
 			{
 				auto sp3 = sp2;
 				cout << *sp3 << '\n';
@@ -30,5 +30,5 @@ int main()
 		}
 		cout << "sp1.use_count() = " << sp1.use_count() << '\n';
 	}
-	std::cout << "main is still running\n";
+	cout << "main is still running\n";
 }
