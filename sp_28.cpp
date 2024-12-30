@@ -4,9 +4,10 @@
 
 int main()
 {
-	using namespace std;
-	auto sptr = make_shared<Date>(12, 5, 1987);
-	weak_ptr<Date> wp{ sptr };
+	using std::cout;
+
+	auto sptr = std::make_shared<Date>(12, 5, 1987);
+	std::weak_ptr<Date> wp{ sptr };
 
 	cout << "sptr.use_count() = " << sptr.use_count() << '\n';
 	cout << "wp.use_count()   = " << wp.use_count() << '\n';
@@ -17,7 +18,7 @@ int main()
 	cout << "wp.use_count()   = " << wp.use_count() << '\n';
 
 	try {
-		shared_ptr<Date> spx(wp); //throws std::bad_weak_ptr
+		std::shared_ptr<Date> spx(wp); //throws std::bad_weak_ptr
 		cout << *spx << '\n';
 	}
 	//catch (const exception& ex) {
