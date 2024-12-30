@@ -4,9 +4,9 @@
 
 int main()
 {
-	using namespace std;
+	using std::cout, std::string, std::shared_ptr;
 
-	cout << boolalpha;
+	cout << std::boolalpha;
 	shared_ptr<string> p1;
 
 	cout << "p1 is : " << (p1 ? "not empty" : "empty") << '\n';
@@ -18,7 +18,7 @@ int main()
 
 	shared_ptr<string> p2{ nullptr };
 	cout << "p2 is : " << (p2 ? "not empty" : "empty") << '\n';
-	p2 = make_shared<string>("ergin");
+	p2 =std:: make_shared<string>("ergin");
 	cout << "p2 is : " << (p2 ? "not empty" : "empty") << '\n';
 	p2 = nullptr;
 	cout << "p2 is : " << (p2 ? "not empty" : "empty") << '\n';
