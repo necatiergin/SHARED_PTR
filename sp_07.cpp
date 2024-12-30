@@ -4,18 +4,18 @@
 
 int main()
 {
-	using namespace std;
+	using std::cout;
 
-	auto p = new string{ "necati ergin" };
+	auto p = new std::string{ "necati ergin" };
 	cout << "p          = " << p << '\n';
-	shared_ptr<string> spx{p};
-	shared_ptr<string> spy;
+	std::shared_ptr<std::string> spx{ p };
+	std::shared_ptr<std::string> spy;
 
 	cout << "*spx       = " << *spx << '\n';
 	cout << "spx        = " << spx << '\n';
 	cout << "spx.get()  = " << spx.get() << '\n';
 
-	cout << boolalpha;
+	cout << std::boolalpha;
 
 	cout << "spx == spy = " << (spx == spy) << '\n';
 	spy = spx;
