@@ -5,15 +5,13 @@
 
 int main()
 {
-	using namespace std;
-
 	{
-		shared_ptr<Point> sptr{ new Point{3, 6, 9}, [](Point* p) {
+		std::shared_ptr<Point> sptr{ new Point{3, 6, 9}, [](Point* p) {
 									std::cout << *p << " is being deleted\n";
 									delete p;
 									} };
 	}
 
-	cout << "main is still running\n";
+	std::cout << "main is still running\n";
 	//...
 }
