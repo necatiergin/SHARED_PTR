@@ -3,7 +3,6 @@
 #include <iostream>
 #include <memory>
 
-
 void* operator new(size_t n)
 {
 	std::cout << "operator new called n : " << n << '\n';
@@ -26,23 +25,23 @@ struct Data {
 };
 
 
-void f1()
+void foo()
 {
-	std::cout << "f1  called\n";
+	std::cout << "foo  called\n";
 	auto p = new Data;
 	std::shared_ptr<Data> sptr(p);
 	std::cout << "\n\n";
 }
 
-void f2()
+void bar()
 {
-	std::cout << "f2 called\n";
+	std::cout << "bar called\n";
 	auto sptr = std::make_shared<Data>();
 	std::cout << "\n\n";
 }
 
 int main()
 {
-	//f1();
-	f2();
+	//foo();
+	bar();
 }
