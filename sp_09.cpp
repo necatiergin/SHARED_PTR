@@ -9,9 +9,7 @@ struct Nec {
 
 int main()
 {
-	using namespace std;
-
-	shared_ptr<void> sp1{ new Nec };
-	shared_ptr<void> sp2{ new string};
-	shared_ptr<void> sp3{ new int};
+	std::shared_ptr<void> sp1{ new Nec };
+	std::shared_ptr<void> sp2{ new std::string };
+	std::shared_ptr<void> sp3{ new int };
 }
