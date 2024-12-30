@@ -6,8 +6,10 @@
 class Person {
 
 public:
+	Person() = default;
 	Person(std::string name, std::string surname) :
-		m_name{ std::move(name) }, m_surname{ std::move(surname) } {}
+		m_name{ std::move(name) }, m_surname{ std::move(surname) } {
+	}
 	friend std::ostream& operator<<(std::ostream& os, const Person& p)
 	{
 		return os << p.m_name << ' ' << p.m_surname;
@@ -25,4 +27,6 @@ public:
 private:
 	std::string m_name;
 	std::string m_surname;
-};
+}; 
+
+#pragma once
