@@ -23,18 +23,18 @@ int main()
 {
     std::cout << "unique ownership\n";
     {
-        std::shared_ptr<Nec> sptr = std::make_shared<Nec>(42);
+        std::shared_ptr<Nec> sp = std::make_shared<Nec>(42);
 
-        std::cout << "Nec::mx = " << sptr->get_x() << ", use_count() = "
-            << sptr.use_count() << '\n';
+        std::cout << "Nec::mx = " << sp->get_x() << ", use_count() = "
+            << sp.use_count() << '\n';
 
-        std::cout << "call sptr.reset()...\n";
-        sptr.reset(); // Nec's destructor is called
-        std::cout << "After reset(): use_count() = " << sptr.use_count()
-            << ", sptr = " << sptr << '\n';
+        std::cout << "call sp.reset()...\n";
+        sp.reset(); // Nec's destructor is called
+        std::cout << "After reset(): use_count() = " << sp.use_count()
+            << ", sp = " << sp << '\n';
 
-        std::cout << std::boolalpha << "sptr == nullptr: " << (sptr == nullptr) << '\n';
-    }   
+        std::cout << std::boolalpha << "sp == nullptr: " << (sp == nullptr) << '\n';
+    }
 
     std::cout << "main is still running\n";
 }
