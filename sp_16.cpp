@@ -20,10 +20,10 @@ struct DelErg {
 
 int main()
 {
-	using namespace std;
+	using std::string, std::shared_ptr;
 
-	shared_ptr<string> sp1(new string{"necati"}, DelNec{});
-	shared_ptr<string> sp2(new string{"ergin"}, DelErg{});
+	shared_ptr<string> sp1(new string{ "necati" }, DelNec{});
+	shared_ptr<string> sp2(new string{ "ergin" }, DelErg{});
 
-	sp1 = sp2;	
+	sp1 = sp2;
 }
