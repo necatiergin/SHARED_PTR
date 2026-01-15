@@ -4,7 +4,6 @@
 #include <string>
 
 class Person {
-
 public:
 	Person() = default;
 	Person(std::string name, std::string surname) :
@@ -28,5 +27,3 @@ private:
 	std::string m_name;
 	std::string m_surname;
 }; 
-
-#pragma once
