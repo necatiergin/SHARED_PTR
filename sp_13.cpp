@@ -13,8 +13,8 @@ int main()
 	}
 
 	for (auto sptr : mylist)
-		std::cout << *sptr << " ";
-	std::cout << "\n\n";
+		std::cout << *sptr << ' ';
+	std::cout << '\n';
 
 	std::vector<Sptr> svec;
 
@@ -22,13 +22,13 @@ int main()
 		svec.push_back(sp);
 	}
 
-	//
+	
 	for (auto sp : svec) {
 		*sp += "can";
 	}
 
-	std::cout << "\n";
+	std::cout << '\n';
 
 	for (auto sptr : mylist)
-		std::cout << *sptr << " ";
+		std::cout << *sptr << ' ';
 }
