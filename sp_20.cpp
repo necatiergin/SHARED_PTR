@@ -5,7 +5,6 @@
 #include <memory>
 #include <iostream>
 
-
 using namespace std;
 
 class Neco : public std::enable_shared_from_this<Neco> {  //CRTP
