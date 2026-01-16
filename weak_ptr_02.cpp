@@ -2,10 +2,12 @@
 #include "person.h"
 #include <iostream>
 
-using namespace std;
+
 
 int main()
 {
+	using namespace std;
+	
 	auto spx = make_shared<Person>("Hakki", "Alagoz");
 
 	cout << *spx << '\n';
@@ -19,7 +21,7 @@ int main()
 	if (wp.expired()) {
 		std::cout << "resource released\n";
 	}
-	else {
+	else {  //not thread_safe
 		cout << "resource not yet released\n";
 		shared_ptr sx{ wp };
 		cout << *sx << '\n';
