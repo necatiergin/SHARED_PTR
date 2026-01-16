@@ -5,7 +5,7 @@
 struct DelNec {
 	void operator()(std::string* p)
 	{
-		std::cout << "DelErg " << *p << '\n';
+		std::cout << "DelNec " << *p << '\n';
 		delete p;
 	}
 };
