@@ -6,7 +6,7 @@ void func(std::shared_ptr<Person> sptr)
 {
 	std::cout << "func called\n";
 	std::cout << "inside func sptr.use_count() = " << sptr.use_count() << '\n';
-	std::cout << *sptr << "\n";
+	std::cout << *sptr << '\n';
 }
 
 int main()
